@@ -1,4 +1,4 @@
-package br.com.zup;
+package br.com.zup.Exemplo1;
 
 public class Main {
 
