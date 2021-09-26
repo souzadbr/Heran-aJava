@@ -1,4 +1,4 @@
 package br.com.zup.EncapsulamentoHerançaPolimorfismo;
 
-public class Coordenadores {
+public class Coordenadores extends Funcionários {
 }
