@@ -15,4 +15,8 @@ public class Coordenadores extends Funcionários {
     public void setProfSupervisionados(Professores profSupervisionados) {
         this.profSupervisionados = profSupervisionados;
     }
+    @Override
+    public double aumentoSalario (){
+        return getSalario()*1.05;
+    }
 }

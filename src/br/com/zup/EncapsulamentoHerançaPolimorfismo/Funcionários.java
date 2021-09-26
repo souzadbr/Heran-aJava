@@ -55,7 +55,7 @@ public class Funcionários {
         this.salario = salario;
     }
 
-    public void aumentoSalario (double porcentagem){
-        salario = salario+(salario*porcentagem);
+    public double aumentoSalario (){
+        return salario*1.1;
     }
 }
