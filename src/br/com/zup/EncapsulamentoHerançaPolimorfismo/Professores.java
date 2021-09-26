@@ -6,6 +6,7 @@ public class Professores extends Funcionários {
     private int qtdAlunos;
     private int qtdTurmas;
 
+
     public Professores(String nome, String cpf, String numeroRegistro, String orgaoLoacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
         super(nome, cpf, numeroRegistro, orgaoLoacao, salario);
         this.nivelGraduacao = nivelGraduacao;
@@ -45,6 +46,14 @@ public class Professores extends Funcionários {
     public void setQtdTurmas(int qtdTurmas) {
         this.qtdTurmas = qtdTurmas;
     }
+
+
+    public String qtdAlunos(){
+        return "Quantidade de aluno: "+qtdAlunos;
+    }
+
+
+
 
 
 
