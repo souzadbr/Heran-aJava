@@ -7,4 +7,12 @@ public class Coordenadores extends Funcionários {
         super(nome, cpf, numeroRegistro, orgaoLoacao, salario);
         this.profSupervisionados = profSupervisionados;
     }
+
+    public Professores getProfSupervisionados() {
+        return profSupervisionados;
+    }
+
+    public void setProfSupervisionados(Professores profSupervisionados) {
+        this.profSupervisionados = profSupervisionados;
+    }
 }
