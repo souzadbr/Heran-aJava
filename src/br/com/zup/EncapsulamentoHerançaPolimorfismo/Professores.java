@@ -55,6 +55,11 @@ public class Professores extends Funcionários {
         return "Quantidade de aluno: " + qtdAlunos;
     }
 
+    public void adicionarTurma (Turma turmaAdicionada){
+        turma = turmaAdicionada;
+
+    }
+
 
 }
 
