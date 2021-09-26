@@ -9,4 +9,20 @@ public class FuncionáriosAdm extends Funcionários {
         this.funcaoAdm = funcaoAdm;
         this.senioridade = senioridade;
     }
+
+    public String getFuncaoAdm() {
+        return funcaoAdm;
+    }
+
+    public void setFuncaoAdm(String funcaoAdm) {
+        this.funcaoAdm = funcaoAdm;
+    }
+
+    public String getSenioridade() {
+        return senioridade;
+    }
+
+    public void setSenioridade(String senioridade) {
+        this.senioridade = senioridade;
+    }
 }
