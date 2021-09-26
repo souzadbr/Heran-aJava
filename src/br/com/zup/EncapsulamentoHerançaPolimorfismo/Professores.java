@@ -5,6 +5,7 @@ public class Professores extends Funcionários {
     private String disciplinaMinistrada;
     private int qtdAlunos;
     private int qtdTurmas;
+    private Turma turma;
 
 
     public Professores(String nome, String cpf, String numeroRegistro, String orgaoLoacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
@@ -47,15 +48,12 @@ public class Professores extends Funcionários {
         this.qtdTurmas = qtdTurmas;
     }
 
-
-    public String qtdAlunos(){
-        return "Quantidade de aluno: "+qtdAlunos;
+    public void adicionarAlunos(){
+        qtdAlunos = qtdAlunos + turma.getQuantidadeDeAluno();
     }
-
-
-
-
-
+    public String qtdAlunos() {
+        return "Quantidade de aluno: " + qtdAlunos;
+    }
 
 
 }
