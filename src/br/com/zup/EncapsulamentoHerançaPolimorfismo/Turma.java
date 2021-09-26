@@ -4,8 +4,9 @@ public class Turma {
     private int quantidadeDeAluno;
     private int serie;
 
-    public Turma() {
-
+    public Turma(int quantidadeDeAluno, int serie) {
+        this.quantidadeDeAluno = quantidadeDeAluno;
+        this.serie = serie;
     }
 
     public int getQuantidadeDeAluno() {

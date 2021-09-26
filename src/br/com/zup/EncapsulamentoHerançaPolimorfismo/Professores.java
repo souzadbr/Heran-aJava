@@ -8,11 +8,10 @@ public class Professores extends Funcionários {
     private Turma turma;
 
 
-    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLoacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLoacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int qtdTurmas) {
         super(nome, cpf, numeroRegistro, orgaoLoacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
-        this.qtdAlunos = qtdAlunos;
         this.qtdTurmas = qtdTurmas;
     }
 
