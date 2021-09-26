@@ -1,12 +1,13 @@
 package br.com.zup.EncapsulamentoHerançaPolimorfismo;
 
-public class Professores extends Funcionários{
+public class Professores extends Funcionários {
     private String nivelGraduacao;
     private String disciplinaMinistrada;
     private int qtdAlunos;
     private int qtdTurmas;
 
-    public Professores(String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
+    public Professores(String nome, String cpf, String numeroRegistro, String orgaoLoacao, double salario, String nivelGraduacao, String disciplinaMinistrada, int qtdAlunos, int qtdTurmas) {
+        super(nome, cpf, numeroRegistro, orgaoLoacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
         this.qtdAlunos = qtdAlunos;
@@ -44,4 +45,8 @@ public class Professores extends Funcionários{
     public void setQtdTurmas(int qtdTurmas) {
         this.qtdTurmas = qtdTurmas;
     }
+
+
 }
+
+
