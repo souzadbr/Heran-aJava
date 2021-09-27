@@ -27,8 +27,6 @@ public class Main {
         coordenador.aumentoSalario();
         System.out.println("O salario do coordenador com 5% de acrescimo é: ");
         System.out.println(coordenador.aumentoSalario());
-        System.out.println("Os professores supervisionados pelo coordenador são: ");
-        coordenador.exibirProfessoresSupervicionados();
 
         System.out.println("------------");
 
