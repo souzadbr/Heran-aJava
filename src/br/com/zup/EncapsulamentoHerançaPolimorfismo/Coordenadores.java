@@ -30,6 +30,7 @@ public class Coordenadores extends Funcionários {
     }
 
     public void removerProfessorSupervisionado (Professores prof){
+
         profSupervisionado.remove(prof);
     }
     @Override
