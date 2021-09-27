@@ -16,8 +16,12 @@ public class Main {
         coordenador.adicionarProfessor(professor2);
         coordenador.adicionarProfessor(professor3);
         //coordenador.adicionarProfessor(professor4);
-        //coordenador.exibirProfessoresSupervicionados();
+        System.out.println("Os professores que serão supervisionados são: ");
+        coordenador.exibirProfessoresSupervicionados();
         System.out.println("------------");
+        System.out.println("Salario atual é: ");
+        coordenador.getSalario();
+        System.out.println(coordenador.getSalario());
         coordenador.aumentoSalario();
         System.out.println("O salario do coordenador com 5% de acrescimo é: ");
         System.out.println(coordenador.aumentoSalario());
@@ -29,6 +33,10 @@ public class Main {
         professor1.adicionarAlunos();
         System.out.println("A quantidade de alunos que o professor dá aula é: ");
         System.out.println(professor1.qtdAlunos());
+        System.out.println("------------");
+        System.out.println("O salario atual do professor é: ");
+        professor1.getSalario();
+        System.out.println(professor1.getSalario());
         System.out.println("O salario do professor com 10% de acrescimento é: ");
         System.out.println(professor1.aumentoSalario());
 
