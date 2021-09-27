@@ -13,7 +13,13 @@ public class Coordenadores extends Funcionários {
     }
 
     public void adicionarProfessor(Professores prof) {
-        profSupervisionado.add(prof);
+
+        if (profSupervisionado.size() < 2) {
+            profSupervisionado.add(prof);
+            System.out.println("Adicionado com sucesso");
+        } else {
+            System.out.println("Estamos no limite de professores a serem supervisionados");
+        }
     }
 
     public void exibirProfessoresSupervicionados() {
