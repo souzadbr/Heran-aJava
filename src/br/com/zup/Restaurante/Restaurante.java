@@ -4,16 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurante {
-    private List<Pratos>pratosRestuarante = new ArrayList<>();
+    private List<Restaurante> pratosRestuarante = new ArrayList<>();
 
-    public Restaurante(List<Pratos> pratosRestuarante) {
+    public Restaurante(List<Restaurante> pratosRestuarante) {
         this.pratosRestuarante = pratosRestuarante;
     }
 
-    public List<Pratos> getPratosRestuarante() {
+    public List<Restaurante> getPratosRestuarante() {
         return pratosRestuarante;
     }
-
+    public void adicionarPrato (Restaurante prato){
+        pratosRestuarante.add(prato);
+    }
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
