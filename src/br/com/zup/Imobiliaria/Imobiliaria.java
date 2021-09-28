@@ -27,6 +27,7 @@ public class Imobiliaria {
     @Override
     public String toString (){
         StringBuilder retorno = new StringBuilder();
+        retorno.append("\n Numero de imoveis cadastrados: "+ imovel.size());
         retorno.append("\n informações imóvel: "+ imovel);
         retorno.append("\n\n");
         return retorno.toString();
