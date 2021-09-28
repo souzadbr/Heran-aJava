@@ -2,15 +2,13 @@ package br.com.zup.Restaurante;
 
 public class Pratos {
     private String nomeDoPrato;
-    private String diaDaSemana;
     private double precoDoPrato;
     private Ingredientes ingredientes;
 
-    public Pratos(String nomeDoPrato, String diaDaSemana, double precoDoPrato, Ingredientes ingredientes) {
+    public Pratos(String nomeDoPrato, double precoDoPrato) {
         this.nomeDoPrato = nomeDoPrato;
-        this.diaDaSemana = diaDaSemana;
         this.precoDoPrato = precoDoPrato;
-        this.ingredientes = ingredientes;
+
     }
 
     public String getNomeDoPrato() {
@@ -21,13 +19,6 @@ public class Pratos {
         this.nomeDoPrato = nomeDoPrato;
     }
 
-    public String getDiaDaSemana() {
-        return diaDaSemana;
-    }
-
-    public void setDiaDaSemana(String diaDaSemana) {
-        this.diaDaSemana = diaDaSemana;
-    }
 
     public double getPrecoDoPrato() {
         return precoDoPrato;

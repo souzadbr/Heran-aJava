@@ -6,24 +6,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ingredientes {
+    private String nomeIngrediente;
+
     private List <Ingredientes> ingredientes = new ArrayList<>();
 
-    public Ingredientes(List<Ingredientes> ingredientes) {
-        this.ingredientes = ingredientes;
+    public Ingredientes(String nomeIngrediente) {
+        this.nomeIngrediente = nomeIngrediente;
+
+    }
+
+
+    public String getNomeIngredeinte() {
+        return nomeIngrediente;
+    }
+
+    public void setNomeIngredeinte(String nomeIngredeinte) {
+        this.nomeIngrediente = nomeIngredeinte;
     }
 
     public List<Ingredientes> getIngredientes() {
         return ingredientes;
     }
 
-    private void add(Ingredientes ingrediente) {
-        ingrediente.add(ingrediente);
-    }
 
     @Override
     public String toString() {
        StringBuilder retorno = new StringBuilder();
-       retorno.append(ingredientes);
+       retorno.append("Lista ingredientes" + ingredientes);
        return retorno.toString();
     }
 }
