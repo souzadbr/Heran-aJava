@@ -1,5 +1,7 @@
 package br.com.zup.Restaurante;
 
+import br.com.zup.Imobiliaria.Moradores;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,9 @@ public class Ingredientes {
         return ingredientes;
     }
 
+    private void add(Ingredientes ingrediente) {
+        ingrediente.add(ingrediente);
+    }
 
     @Override
     public String toString() {
