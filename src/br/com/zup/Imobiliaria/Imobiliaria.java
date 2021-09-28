@@ -24,7 +24,7 @@ public class Imobiliaria {
     public void adicionarImovel (Imovel imovel){
        this.imovel.add(imovel);
     }
-
+    @Override
     public String toString (){
         StringBuilder retorno = new StringBuilder();
         retorno.append("\n informações imóvel: "+ imovel);

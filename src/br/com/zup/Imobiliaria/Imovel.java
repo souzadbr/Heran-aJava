@@ -47,9 +47,6 @@ public class Imovel {
         return moradores;
     }
 
-    public void setMoradores(List<Moradores> moradores) {
-        this.moradores = moradores;
-    }
     public void adicionarMorador(Moradores morador){
         moradores.add(morador);
     }
