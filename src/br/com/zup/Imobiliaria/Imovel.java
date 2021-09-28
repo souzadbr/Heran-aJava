@@ -56,6 +56,7 @@ public class Imovel {
         retorno.append("\n Endereço imóvel: "+enderecoImovel);
         retorno.append("\n Valor alugel: "+ valorAluguel);
         retorno.append("\n Moradores: "+moradores);
+        retorno.append("\n Quantidade de moradores: "+ moradores.size());
         retorno.append("\n Funcionario resposavel: "+funcionario);
         return retorno.toString();
     }
