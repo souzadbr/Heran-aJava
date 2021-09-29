@@ -52,11 +52,12 @@ public class Sistema {
 
             if (opcaoUsuario == 1){
                 Pratos novoPrato = cadastrarPratos();
+               cardapio.adicionarPrato(novoPrato);
 
                 int qtdIngredientes = capturaDados("Digite a quantidade de ingredientes desse Prato: ").nextInt();
                 for (int i = 0; i < qtdIngredientes; i++ ){
                     Ingredientes ingrediente = cadastrarIngredientes();
-
+                    novoPrato.adicionarIngrediente(ingrediente);
                 }
 
 
