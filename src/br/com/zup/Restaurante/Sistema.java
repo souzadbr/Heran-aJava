@@ -31,7 +31,7 @@ public class Sistema {
     }
 
     //Metodo cadastrar ingrediente
-    public static  Ingredientes cadastrarIngredientes(){
+    public static Ingredientes cadastrarIngredientes() {
         String nome = capturaDados("Digite o ingredeintes da lista de ingredientes: ").nextLine();
 
         Ingredientes ingrediente = new Ingredientes(nome);
@@ -40,34 +40,33 @@ public class Sistema {
     }
     //Método resposavel juntar tudo
 
-    public static void executar (){
+    public static void executar() {
         boolean menu = true;
         Cardapio cardapio = new Cardapio();
 
-        while (menu){
+        while (menu) {
 
 
             menu();
             int opcaoUsuario = capturaDados("Digite a opção desejada: ").nextInt();
 
-            if (opcaoUsuario == 1){
+            if (opcaoUsuario == 1) {
                 Pratos novoPrato = cadastrarPratos();
-               cardapio.adicionarPrato(novoPrato);
+                cardapio.adicionarPrato(novoPrato);
 
                 int qtdIngredientes = capturaDados("Digite a quantidade de ingredientes desse Prato: ").nextInt();
-                for (int i = 0; i < qtdIngredientes; i++ ){
+                for (int i = 0; i < qtdIngredientes; i++) {
                     Ingredientes ingrediente = cadastrarIngredientes();
                     novoPrato.adicionarIngrediente(ingrediente);
+
                 }
 
 
-            }else if(opcaoUsuario == 2){
+            } else if (opcaoUsuario == 2) {
                 System.out.println(cardapio);
-            }
-            else if (opcaoUsuario == 3){
+            } else if (opcaoUsuario == 3) {
                 System.out.println("Volte sempre!");
                 break;
-
             }
         }
     }

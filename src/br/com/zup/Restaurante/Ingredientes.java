@@ -8,7 +8,7 @@ import java.util.List;
 public class Ingredientes {
     private String nomeIngrediente;
 
-    private List <Ingredientes> ingredientes = new ArrayList<>();
+    private List<Ingredientes> ingredientes = new ArrayList<>();
 
     public Ingredientes(String nomeIngrediente) {
         this.nomeIngrediente = nomeIngrediente;
@@ -31,8 +31,8 @@ public class Ingredientes {
 
     @Override
     public String toString() {
-       StringBuilder retorno = new StringBuilder();
-       retorno.append("Lista ingredientes" + ingredientes);
-       return retorno.toString();
+        StringBuilder retorno = new StringBuilder();
+        retorno.append(ingredientes);
+        return retorno.toString();
     }
 }

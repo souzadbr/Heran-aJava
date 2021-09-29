@@ -17,10 +17,10 @@ public class Cardapio {
     public List<Pratos> getPratosRestaurante() {
         return pratosRestaurante;
     }
-    public void adicionarPrato (Pratos prato){
+
+    public void adicionarPrato(Pratos prato) {
         this.pratosRestaurante.add(prato);
     }
-
 
 
     @Override
