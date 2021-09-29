@@ -10,6 +10,10 @@ public class Ingredientes {
 
     private List<Ingredientes> ingredientes = new ArrayList<>();
 
+    public Ingredientes() {
+
+
+    }
     public Ingredientes(String nomeIngrediente) {
         this.nomeIngrediente = nomeIngrediente;
 

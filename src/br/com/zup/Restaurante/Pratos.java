@@ -40,8 +40,8 @@ public class Pratos {
     public void setIngredientes(List<Ingredientes> ingredientes) {
         this.ingredientes = ingredientes;
     }
-    public void adicionarIngrediente (Ingredientes novoIngrediente){
-        this.ingredientes.add(novoIngrediente);
+    public void addIngrediente (Ingredientes novoIngrediente){
+       ingredientes.add(novoIngrediente);
     }
 
     @Override

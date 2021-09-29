@@ -23,8 +23,6 @@ public class Sistema {
     public static Pratos cadastrarPratos() {
         String nome = capturaDados("Digite o nome do Prato: ").nextLine();
         double valorPrato = capturaDados("Digite o preço do Prato: R$").nextDouble();
-
-
         Pratos prato = new Pratos(nome, valorPrato);
         return prato;
 
@@ -32,11 +30,11 @@ public class Sistema {
 
     //Metodo cadastrar ingrediente
     public static Ingredientes cadastrarIngredientes() {
-        String nome = capturaDados("Digite o ingredeintes da lista de ingredientes: ").nextLine();
-
-        Ingredientes ingrediente = new Ingredientes(nome);
-
-        return ingrediente;
+        Pratos prato = new Pratos();
+        String nome = capturaDados("Digite o ingredientes da lista: ").nextLine();
+        Ingredientes ingredientes = new Ingredientes(nome);
+        prato.addIngrediente(ingredientes);
+        return ingredientes;
     }
     //Método resposavel juntar tudo
 
@@ -51,13 +49,13 @@ public class Sistema {
             int opcaoUsuario = capturaDados("Digite a opção desejada: ").nextInt();
 
             if (opcaoUsuario == 1) {
-                Pratos novoPrato = cadastrarPratos();
-                cardapio.adicionarPrato(novoPrato);
+                Pratos prato = cadastrarPratos();
+                cardapio.adicionarPrato(prato);
 
                 int qtdIngredientes = capturaDados("Digite a quantidade de ingredientes desse Prato: ").nextInt();
                 for (int i = 0; i < qtdIngredientes; i++) {
-                    Ingredientes ingrediente = cadastrarIngredientes();
-                    novoPrato.adicionarIngrediente(ingrediente);
+                    Ingredientes ingredientes = cadastrarIngredientes();
+                    prato.addIngrediente(ingredientes);
 
                 }
 
