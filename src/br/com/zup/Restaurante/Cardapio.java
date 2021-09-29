@@ -17,6 +17,13 @@ public class Cardapio {
     public List<Pratos> getPratosRestaurante() {
         return pratosRestaurante;
     }
+    public void adicionarPrato (Cardapio cardapio){
+        cardapio.add(cardapio);
+    }
+
+    private void add(Cardapio cardapio) {
+        cardapio.add(cardapio);
+    }
 
 
     @Override

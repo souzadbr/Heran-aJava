@@ -51,7 +51,21 @@ public class Sistema {
             int opcaoUsuario = capturaDados("Digite a opção desejada: ").nextInt();
 
             if (opcaoUsuario == 1){
-                Pratos prato = cadastrarPratos();
+                Pratos novoPrato = cadastrarPratos();
+
+                int qtdIngredientes = capturaDados("Digite a quantidade de ingredientes desse Prato: ").nextInt();
+                for (int i = 0; i < qtdIngredientes; i++ ){
+                    Ingredientes ingrediente = cadastrarIngredientes();
+
+                }
+
+
+            }else if(opcaoUsuario == 2){
+                System.out.println(cardapio);
+            }
+            else if (opcaoUsuario == 3){
+                System.out.println("Volte sempre!");
+                break;
 
             }
         }
