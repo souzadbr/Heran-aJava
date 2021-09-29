@@ -53,7 +53,9 @@ public class Sistema {
                 cardapio.adicionarPrato(prato);
 
                 int qtdIngredientes = capturaDados("Digite a quantidade de ingredientes desse Prato: ").nextInt();
+
                 for (int i = 0; i < qtdIngredientes; i++) {
+
                     Ingredientes ingredientes = cadastrarIngredientes();
                     prato.addIngrediente(ingredientes);
 
