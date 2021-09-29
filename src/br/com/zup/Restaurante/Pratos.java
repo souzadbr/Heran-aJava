@@ -6,7 +6,7 @@ import java.util.List;
 public class Pratos {
     private String nomeDoPrato;
     private double precoDoPrato;
-    private List<Ingredientes> ingredientes = new ArrayList<>();
+    private List<Ingrediente> ingredientes = new ArrayList<>();
 
     public Pratos() {
 
@@ -33,14 +33,14 @@ public class Pratos {
         this.precoDoPrato = precoDoPrato;
     }
 
-    public List<Ingredientes> getIngredientes() {
+    public List<Ingrediente> getIngredientes() {
         return ingredientes;
     }
 
-    public void setIngredientes(List<Ingredientes> ingredientes) {
+    public void setIngredientes(List<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
     }
-    public void addIngrediente (Ingredientes novoIngrediente){
+    public void addIngrediente (Ingrediente novoIngrediente){
        ingredientes.add(novoIngrediente);
     }
 

@@ -29,11 +29,12 @@ public class Sistema {
     }
 
     //Metodo cadastrar ingrediente
-    public static Ingredientes cadastrarIngredientes() {
-        Pratos prato = new Pratos();
+    public static Ingrediente cadastrarIngredientes() {
+
         String nome = capturaDados("Digite o ingredientes da lista: ").nextLine();
-        Ingredientes ingredientes = new Ingredientes(nome);
-        prato.addIngrediente(ingredientes);
+        Ingrediente ingredientes = new Ingrediente(nome);
+
+
         return ingredientes;
     }
     //Método resposavel juntar tudo
@@ -56,7 +57,7 @@ public class Sistema {
 
                 for (int i = 0; i < qtdIngredientes; i++) {
 
-                    Ingredientes ingredientes = cadastrarIngredientes();
+                    Ingrediente ingredientes = cadastrarIngredientes();
                     prato.addIngrediente(ingredientes);
 
                 }

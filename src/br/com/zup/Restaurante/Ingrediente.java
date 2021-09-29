@@ -2,19 +2,16 @@ package br.com.zup.Restaurante;
 
 import br.com.zup.Imobiliaria.Moradores;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class Ingredientes {
+public class Ingrediente {
     private String nomeIngrediente;
 
-    private List<Ingredientes> ingredientes = new ArrayList<>();
 
-    public Ingredientes() {
+    public Ingrediente() {
 
 
     }
-    public Ingredientes(String nomeIngrediente) {
+    public Ingrediente(String nomeIngrediente) {
         this.nomeIngrediente = nomeIngrediente;
 
     }
@@ -28,15 +25,12 @@ public class Ingredientes {
         this.nomeIngrediente = nomeIngredeinte;
     }
 
-    public List<Ingredientes> getIngredientes() {
-        return ingredientes;
-    }
 
 
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append(ingredientes);
+        retorno.append(nomeIngrediente);
         return retorno.toString();
     }
 }
