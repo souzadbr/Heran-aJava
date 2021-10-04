@@ -37,6 +37,7 @@ public class Sistema {
 
         return ingredientes;
     }
+
     //Método resposavel juntar tudo
 
     public static void executar() {

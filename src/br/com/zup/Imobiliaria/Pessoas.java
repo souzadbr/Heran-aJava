@@ -1,10 +1,20 @@
 package br.com.zup.Imobiliaria;
 
-public class Pessoas {
+public abstract class Pessoas {
     private String nome;
+    private String cpf;
 
-    public Pessoas(String nome) {
+    public Pessoas(String nome, String cpf) {
         this.nome = nome;
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getNome() {

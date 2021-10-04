@@ -20,36 +20,54 @@ public class Imovel {
     }
 
     public String getEnderecoImovel() {
+
         return enderecoImovel;
     }
 
     public void setEnderecoImovel(String enderecoImovel) {
+
         this.enderecoImovel = enderecoImovel;
     }
 
     public double getValorAluguel() {
+
         return valorAluguel;
     }
 
     public void setValorAluguel(double valorAluguel) {
+
         this.valorAluguel = valorAluguel;
     }
 
     public Funcionarios getFuncionario() {
+
         return funcionario;
     }
 
     public void setFuncionario(Funcionarios funcionario) {
+
         this.funcionario = funcionario;
     }
 
     public List<Moradores> getMoradores() {
+
         return moradores;
     }
 
     public void adicionarMorador(Moradores morador){
-        moradores.add(morador);
+        boolean cpfRepetido = false;
+        for (Moradores referencia: moradores) {
+            if(referencia.getCpf().equals(morador.getCpf())){
+                cpfRepetido = true;
+                System.out.println("Cpf Repetido");
+            }
+        }
+       if ( cpfRepetido == false ) {
+           moradores.add(morador);
+       }
+
     }
+
     @Override
     public String toString (){
         StringBuilder retorno = new StringBuilder();
