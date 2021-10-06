@@ -76,12 +76,18 @@ public class Sistema {
 
 
             if (cpfExistente == true) {
+
                 System.out.println("CPF já é cadastrado no sistema.");
+
             } else{
                 imovel.adicionarMorador(morador);
                 contadorDeMoradores++;
+
+                System.out.println("Morador "+contadorDeMoradores+" cadastrado com sucesso");
+
             }
         }
+
     }
 
     //Método que remove morador de 1 imovel por CPF/ por ter responsabilidade
@@ -98,7 +104,7 @@ public class Sistema {
                 return "Morador foi removido com sucesso";
             }
         }
-        return "Morador cadastrado no sistem";
+        return "Morador cadastrado no sistema";
     }
 
     //Método rsposavel por cadastrar funcionário resposavel tipo Funcionarios - recebe dado de funcionario
@@ -116,7 +122,7 @@ public class Sistema {
 
     //Método resposavel por cadastrar imovel de tipo Imovel - recebe dados do imovel
     public static Imovel cadastrarImovel() {
-        String endereçoImovel = capturarDados("digite o endereço do imóvel: ").nextLine();
+        String endereçoImovel = capturarDados("Digite o endereço do imóvel: ").nextLine();
         double valorAluguel = capturarDados("Digite o valor do Aluguel: ").nextDouble();
 
         //Estanciar um imovel para receber os dados coletados acima
@@ -147,9 +153,16 @@ public class Sistema {
             if (opcaoDoUsuario == 1){
                 Imovel imovel = cadastrarImovel();
                 imobiliaria.adicionarImovel(imovel);
+                System.out.println("--------------");
+                System.out.println("Imovel cadastrado com sucesso.");
+                System.out.println("--------------");
                 Funcionarios funcionarios = cadastrarFuncionario();
                 imovel.setFuncionario(funcionarios);
+                System.out.println("--------------");
+                System.out.println("Funcionário cadastrado com sucesso.");
+                System.out.println("--------------");
                 cadastrarMoradores(imobiliaria,imovel);
+
 
             }else if (opcaoDoUsuario == 2){
                 System.out.println(imobiliaria);
