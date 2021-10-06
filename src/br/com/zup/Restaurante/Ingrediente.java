@@ -1,7 +1,5 @@
 package br.com.zup.Restaurante;
 
-import br.com.zup.Imobiliaria.Moradores;
-
 
 public class Ingrediente {
     private String nomeIngrediente;

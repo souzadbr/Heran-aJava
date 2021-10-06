@@ -10,6 +10,7 @@ public abstract class Pessoas {
     }
 
     public String getCpf() {
+
         return cpf;
     }
 
@@ -18,10 +19,19 @@ public abstract class Pessoas {
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
+    }
+    @Override
+    public String toString (){
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n Nome: "+nome);
+        retorno.append("\n CPF: "+cpf);
+        return retorno.toString();
     }
 }

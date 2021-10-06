@@ -4,60 +4,48 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Imobiliaria {
-    private List<Imovel> imovel = new ArrayList<>();
+    private List<Imovel> imoveis = new ArrayList<>();
 
-    public Imobiliaria() {
-
+    public List<Imovel> getImoveis() {
+        return imoveis;
     }
 
-    public Imobiliaria(List<Imovel> imovel) {
-
-        this.imovel = imovel;
+    public void setImoveis(List<Imovel> imoveis) {
+        this.imoveis = imoveis;
     }
 
-    public List<Imovel> getImovel() {
-
-        return imovel;
+    public void adicionarImovel(Imovel imovel){
+        imoveis.add(imovel);
     }
 
-    public void setImovel(List<Imovel> imovel) {
+    //  public void buscarImovel(String enderecoImovel, String cpf) {
+   //     Imovel imovelASerEncontrado = null;
+   //     Moradores moradorASerExcluido = null;
 
-        this.imovel = imovel;
-    }
+  //      for (Imovel referencia : imovel) {
+  //          if (referencia.getEnderecoImovel().equals(enderecoImovel)) {
+   //             imovelASerEncontrado = referencia;
+   //             System.out.println("Imovel encontrado via endereço. ");
 
-    public void adicionarImovel(Imovel imovel) {
+   //             for (Moradores referenciaMorador : referencia.getMoradores()) {
+   //                 if (referenciaMorador.getCpf().equals(cpf)){
+   //                    moradorASerExcluido = referenciaMorador;
+   //                     System.out.println("Morador excluido");
+   //                 }
 
-        this.imovel.add(imovel);
-    }
+     //           }
+         //       referencia.getMoradores().remove(moradorASerExcluido);
+   //         }
 
-    public void buscarImovel(String enderecoImovel, String cpf) {
-        Imovel imovelASerEncontrado = null;
-        Moradores moradorASerExcluido = null;
+   //     }
 
-        for (Imovel referencia : imovel) {
-            if (referencia.getEnderecoImovel().equals(enderecoImovel)) {
-                imovelASerEncontrado = referencia;
-                System.out.println("Imovel encontrado via endereço. ");
-
-                for (Moradores referenciaMorador : referencia.getMoradores()) {
-                    if (referenciaMorador.getCpf().equals(cpf)){
-                       moradorASerExcluido = referenciaMorador;
-                        System.out.println("Morador excluido");
-                    }
-
-                }
-                referencia.getMoradores().remove(moradorASerExcluido);
-            }
-
-        }
-
-    }
+  //  }
 
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Numero de imoveis cadastrados: " + imovel.size());
-        retorno.append("\n informações imóvel: " + imovel);
+        retorno.append("\n Numero de imoveis cadastrados: " + imoveis.size());
+        retorno.append("\n informações imóvel: " + imoveis);
         retorno.append("\n\n");
         return retorno.toString();
     }
