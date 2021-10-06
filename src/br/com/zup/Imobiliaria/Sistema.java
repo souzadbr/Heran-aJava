@@ -15,6 +15,42 @@ public class Sistema {
         return new Scanner(System.in);
     }
 
+    //Método resposavel por cadastrar imovel de tipo Imovel - recebe dados do imovel
+    public static Imovel cadastrarImovel() {
+        String endereçoImovel = capturarDados("Digite o endereço do imóvel: ").nextLine();
+        double valorAluguel = capturarDados("Digite o valor do Aluguel: ").nextDouble();
+
+        //Estanciar um imovel para receber os dados coletados acima
+        Imovel imovel = new Imovel(endereçoImovel, valorAluguel);
+        return imovel;
+    }
+
+    //Método rsposavel por cadastrar funcionário resposavel tipo Funcionarios - recebe dado de funcionario
+
+    public static Funcionarios cadastrarFuncionario() {
+        String nome = capturarDados("Digite o nome do funcionário responsavel: ").nextLine();
+        String cpf = capturarDados("Digite o CPF do funcionário resposavel: ").nextLine();
+        String ctps = capturarDados("Digite a carteira de trabalho do funcionário responsavel: ").nextLine();
+
+        //Estanciar 1 funcionarios comd ados recebidos
+        Funcionarios funcionarios = new Funcionarios(nome, cpf, ctps);
+        //retornar funcionario
+        return funcionarios;
+    }
+
+    //Método resposavel por receber os dados que serão usados no metodo cadastrar morador
+    public static Morador receberDadosdosMoradores() {
+        String nome = capturarDados("Digite seu nome: ").nextLine();
+        String cpf = capturarDados("Digite seu CPF: ").nextLine();
+        String telefone = capturarDados("Digite seu telefone: ").nextLine();
+        Double renda = capturarDados("Digite seu salario: ").nextDouble();
+        String email = capturarDados("Digite um email : ").nextLine();
+
+        Morador morador = new Morador(nome, cpf, telefone, renda, email);
+        return morador;
+    }
+
+
     //validação CPF - recebendo Imobiliaria e moradores para verificar todos os dados dentro da imobiliaria - será usado no metodo cadastrar morador
     private static boolean validarCpfExistente(Imobiliaria imobiliaria, Morador morador) {
         //Percorrer minha lista de imoveis
@@ -33,16 +69,16 @@ public class Sistema {
     }
 
     //Validação de email existente
-    private static boolean validarEmailExistente (Imobiliaria imobiliaria, Morador morador){
+    private static boolean validarEmailExistente(Imobiliaria imobiliaria, Morador morador) {
         String email = morador.getEmail();
         for (Imovel percorrerImovel : imobiliaria.getImoveis()) {
             //Percorrer toda a lista de moradores
-            for (Morador percorrerMoradores: percorrerImovel.getMoradores()) {
-                if(percorrerMoradores.getEmail().equals(email)){
+            for (Morador percorrerMoradores : percorrerImovel.getMoradores()) {
+                if (percorrerMoradores.getEmail().equals(email)) {
                     //Este email já existe cadastrado no sistema.
                     System.out.println("Email já existe no sistema");
                     return true;
-                }else if(percorrerMoradores.getEmail().contains("@")){
+                } else if (percorrerMoradores.getEmail().contains("@")) {
                     //Este meail é invalido
                     System.out.println("Este email é inválido");
                     return true;
@@ -53,17 +89,6 @@ public class Sistema {
         return false;
     }
 
-    //Método resposavel por receber os dados que serão usados no metodo cadastrar morador
-    public static Morador receberDadosdosMoradores() {
-        String nome = capturarDados("Digite seu nome: ").nextLine();
-        String cpf = capturarDados("Digite seu CPF: ").nextLine();
-        String telefone = capturarDados("Digite seu telefone: ").nextLine();
-        Double renda = capturarDados("Digite seu salario: ").nextDouble();
-        String email = capturarDados("Digite um email : ").nextLine();
-
-        Morador morador = new Morador(nome, cpf, telefone, renda,email);
-        return morador;
-    }
 
     //Cadastrar moradores fazendo a validação de cpf do método acima e usando os dados recebidos no método acima
     public static void cadastrarMoradores(Imobiliaria imobiliaria, Imovel imovel) {
@@ -79,11 +104,11 @@ public class Sistema {
 
                 System.out.println("CPF já é cadastrado no sistema.");
 
-            } else{
+            } else {
                 imovel.adicionarMorador(morador);
                 contadorDeMoradores++;
 
-                System.out.println("Morador "+contadorDeMoradores+" cadastrado com sucesso");
+                System.out.println("Morador " + contadorDeMoradores + " cadastrado com sucesso");
 
             }
         }
@@ -107,28 +132,6 @@ public class Sistema {
         return "Morador cadastrado no sistema";
     }
 
-    //Método rsposavel por cadastrar funcionário resposavel tipo Funcionarios - recebe dado de funcionario
-
-    public static Funcionarios cadastrarFuncionario() {
-        String nome = capturarDados("Digite o nome do funcionário responsavel: ").nextLine();
-        String cpf = capturarDados("Digite o CPF do funcionário resposavel: ").nextLine();
-        String ctps = capturarDados("Digite a carteira de trabalho do funcionário responsavel: ").nextLine();
-
-        //Estanciar 1 funcionarios comd ados recebidos
-        Funcionarios funcionarios = new Funcionarios(nome, cpf, ctps);
-        //retornar funcionario
-        return funcionarios;
-    }
-
-    //Método resposavel por cadastrar imovel de tipo Imovel - recebe dados do imovel
-    public static Imovel cadastrarImovel() {
-        String endereçoImovel = capturarDados("Digite o endereço do imóvel: ").nextLine();
-        double valorAluguel = capturarDados("Digite o valor do Aluguel: ").nextDouble();
-
-        //Estanciar um imovel para receber os dados coletados acima
-        Imovel imovel = new Imovel(endereçoImovel, valorAluguel);
-        return imovel;
-    }
 
     //Exibir escolhas menu
     public static void menu() {
@@ -150,7 +153,7 @@ public class Sistema {
             menu();
             int opcaoDoUsuario = capturarDados("Digite a opção desejada: ").nextInt();
 
-            if (opcaoDoUsuario == 1){
+            if (opcaoDoUsuario == 1) {
                 Imovel imovel = cadastrarImovel();
                 imobiliaria.adicionarImovel(imovel);
                 System.out.println("--------------");
@@ -161,16 +164,16 @@ public class Sistema {
                 System.out.println("--------------");
                 System.out.println("Funcionário cadastrado com sucesso.");
                 System.out.println("--------------");
-                cadastrarMoradores(imobiliaria,imovel);
+                cadastrarMoradores(imobiliaria, imovel);
 
 
-            }else if (opcaoDoUsuario == 2){
+            } else if (opcaoDoUsuario == 2) {
                 System.out.println(imobiliaria);
-            }else if (opcaoDoUsuario == 3){
+            } else if (opcaoDoUsuario == 3) {
                 //Para deixar o código mais limpo e mais facil a manutenção criar uma variavel para receber o retorno do metodo
                 String mensagemDaRemoção = removerMoradorPorCpf(imobiliaria);
                 System.out.println(mensagemDaRemoção);
-            }else if (opcaoDoUsuario == 4){
+            } else if (opcaoDoUsuario == 4) {
                 System.out.println("Obrigada, voltei sempre");
                 //menufalse para sair
                 menu = false;
